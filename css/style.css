@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --BG-COLOR: #000;
+    --TEXT-COLOR: whitesmoke;
+    --ALT-BGCOLOR: #111111;
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: 'Nunito', cursive;
+    color: var(--TEXT-COLOR);
+    background-color: var(--BG-COLOR);
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--BG-COLOR);
+    color: var(--TEXT-COLOR);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 0.5rem;
+}
+
+nav ul li a:any-link {
+    text-decoration: none;
+    color: var(--TEXT-COLOR);
+    padding: 0.75rem;
+}
+
+nav ul li a:hover {
+    color: rgba(245, 245, 245, 0.516);
+}
+
+figcaption {
+    position: absolute;
+    left: -100000px;
+}
+
+.home {
+    height: 86vh;
+    margin-top: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-flow: row;
+    gap: 1rem;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.main-img {
+    height: 500px;
+    width: 500px;
+}
+
+.home figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.home h3 {
+    text-align: center;
+    display: grid;
+    place-content: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    transform: translateY(-70px);
+}
+
+.home h3 span:first-child {
+    transform: translateX(-50px);
+    white-space: nowrap;
+    font-size: 5rem;
+    text-shadow: 2px 5px black;
+}
+
+.home h3 span:nth-child(2) {
+    transform: translateX(-50px);
+    white-space: nowrap;
+    font-size: 5rem;
+    text-shadow: 2px 5px black;
+}
+
+.home h3 span:nth-child(3) {
+    transform: translateX(-50px);
+    white-space: nowrap;
+    font-size: 3rem;
+    text-shadow: 2px 5px black;
+}
+
+.home h3 span:nth-child(4) {
+    transform: translateX(-50px);
+    white-space: nowrap;
+    font-size: 2rem;
+    text-shadow: 2px 5px black;
+}
+
+.home h3 span:last-child {
+    transform: translateX(-50px);
+    white-space: nowrap;
+    font-size: 1rem;
+    margin-top: 10px;
+    text-shadow: 2px 5px black;
+}
+
+.home h3 span:last-child a:hover {
+    color: rgba(245, 245, 245, 0.551);
+}
+
+.home h3 a:any-link {
+    text-decoration: none;
+    color: var(--TEXT-COLOR);
+}
+
+.animate {
+    animation: 10s ease-in-out infinite normal forwards bubble;
+}
+
+@keyframes bubble {
+    0%, 100% {
+        border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+    }
+    14% {
+        border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+    }
+    28% {
+        border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+    }
+    42% {
+        border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+    }
+    56% {
+        border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+    }
+    70% {
+        border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+    }
+    84% {
+        border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+    }
+}
+
+.about {
+    height: 80vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--ALT-BGCOLOR);
+    padding: 1rem;
+}
+
+.about h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.about-me-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.about-me-card {
+    background-color: var(--BG-COLOR);
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.about-me-card span {
+    font-size: 4rem;
+}
+
+.about-me-card p {
+    text-align: center;
+}
+
+.about-me-card p:last-child {
+    color: #7f7f7f;
+}
+
+.skills {
+    background-color: var(--BG-COLOR);
+    height: 70vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 5rem;
+    align-items: center;
+}
+
+.skills section {
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 3rem;
+    align-items: flex-start;
+
+}
+
+.skills ul {
+    list-style-type: none;
+}
+
+.skills-img {
+    height: 400px;
+    width: 400px;
+}
+
+.skills-img img {
+    width: 100%;
+    height: auto;
+    animation: bubble 10s linear infinite alternate forwards;
+    border-radius: 100%;
+}
+
+.skills h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+}
+
+.skills .progress-bar-container {
+    width: 600px;
+}
+
+.skills .progress-bar-container div {
+    padding: 0.25rem;
+}
+
+.skills ul p {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.progress-bar1 {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+}
+
+.progress-bar-container div {
+    border-radius: 20px;
+}
+
+.progress-bar-container div::before {
+    border-radius: 20px;
+}
+
+.progress-bar1::before {
+    display: block;
+    content: "";
+    width: 80%;
+    height: 6px;
+    background-color: var(--TEXT-COLOR);
+    transform: translate(-4px, -3px);
+}
+.progress-bar2 {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+}
+
+.progress-bar2::before {
+    display: block;
+    content: "";
+    width: 60%;
+    height: 6px;
+    background-color: var(--TEXT-COLOR);
+    transform: translate(-4px, -3px);
+}
+.progress-bar3 {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+}
+
+.progress-bar3::before {
+    display: block;
+    content: "";
+    width: 50%;
+    height: 6px;
+    background-color: var(--TEXT-COLOR);
+    transform: translate(-4px, -3px);
+}
+.progress-bar4 {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+}
+
+.progress-bar4::before {
+    display: block;
+    content: "";
+    width: 70%;
+    height: 6px;
+    background-color: var(--TEXT-COLOR);
+    transform: translate(-4px, -3px);
+}
+.progress-bar5 {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+}
+
+.progress-bar5::before {
+    display: block;
+    content: "";
+    width: 90%;
+    height: 6px;
+    background-color: var(--TEXT-COLOR);
+    transform: translate(-4px, -3px);
+}
+
+.myWork {
+    height: 80vh;
+    background-color: var(--ALT-BGCOLOR);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    /* gap: 2rem; */
+    align-items: center;
+}
+
+.mywork-card-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.myWork h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+.mywork-card {
+    height: 300px;
+    width: 400px;
+    background-color: var(--BG-COLOR);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.mywork-card h3 {
+    text-decoration: underline;
+}
+
+.mywork-card p {
+    text-align: center;
+}
+
+.contact {
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.my-contact-info a:any-link {
+    text-decoration: none;
+    color: var(--TEXT-COLOR);
+}
+
+.my-contact-info p {
+    padding: 0.5rem;
+}
+
+.column-form {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+.form-group {
+    margin-bottom: 1rem;
+}
+  
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+  
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+  
+button[type="submit"] {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: var(--TEXT-COLOR);
+    border: 2px solid var(--TEXT-COLOR);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    width: 30%;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--TEXT-COLOR);
+    color: black;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 0.25rem;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.social-icons {
+    margin-left: 10px;
+    position: fixed;
+    top: 40%;
+}
+
+.social-icons ul {
+    list-style-type: none;
+}
+
+@media screen and (max-width: 650px){
+    .home {
+        flex-flow: column nowrap;
+    }
+}
